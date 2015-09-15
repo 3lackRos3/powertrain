@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @engine.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @engine.subtitle %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @engine.price %>
+</p>
+
+<p>
+  <strong>Stock status:</strong>
+  <%= @engine.stock_status %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @engine.availability %>
+</p>
+
+<p>
+  <strong>Product code:</strong>
+  <%= @engine.product_code %>
+</p>
+
+<p>
+  <strong>Image urls:</strong>
+  <%= @engine.image_urls %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @engine.description %>
+</p>
+
+<%= link_to 'Edit', edit_engine_path(@engine) %> |
+<%= link_to 'Back', engines_path %>

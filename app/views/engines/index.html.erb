@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Engines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Price</th>
+      <th>Stock status</th>
+      <th>Availability</th>
+      <th>Product code</th>
+      <th>Image urls</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @engines.each do |engine| %>
+      <tr>
+        <td><%= engine.title %></td>
+        <td><%= engine.subtitle %></td>
+        <td><%= engine.price %></td>
+        <td><%= engine.stock_status %></td>
+        <td><%= engine.availability %></td>
+        <td><%= engine.product_code %></td>
+        <td><%= engine.image_urls %></td>
+        <td><%= engine.description %></td>
+        <td><%= link_to 'Show', engine %></td>
+        <td><%= link_to 'Edit', edit_engine_path(engine) %></td>
+        <td><%= link_to 'Destroy', engine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Engine', new_engine_path %>

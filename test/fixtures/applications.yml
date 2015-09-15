@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  year: MyString
+  cyl: MyString
+  size: MyString
+  drv: MyString
+  vin: MyString
+  options: MyString
+  engine_id: 1
+
+two:
+  make: MyString
+  model: MyString
+  year: MyString
+  cyl: MyString
+  size: MyString
+  drv: MyString
+  vin: MyString
+  options: MyString
+  engine_id: 1

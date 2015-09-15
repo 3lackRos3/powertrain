@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Cyl</th>
+      <th>Size</th>
+      <th>Drv</th>
+      <th>Vin</th>
+      <th>Options</th>
+      <th>Engine</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @applications.each do |application| %>
+      <tr>
+        <td><%= application.make %></td>
+        <td><%= application.model %></td>
+        <td><%= application.year %></td>
+        <td><%= application.cyl %></td>
+        <td><%= application.size %></td>
+        <td><%= application.drv %></td>
+        <td><%= application.vin %></td>
+        <td><%= application.options %></td>
+        <td><%= application.engine_id %></td>
+        <td><%= link_to 'Show', application %></td>
+        <td><%= link_to 'Edit', edit_application_path(application) %></td>
+        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Application', new_application_path %>

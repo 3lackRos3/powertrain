@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @application.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @application.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @application.year %>
+</p>
+
+<p>
+  <strong>Cyl:</strong>
+  <%= @application.cyl %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @application.size %>
+</p>
+
+<p>
+  <strong>Drv:</strong>
+  <%= @application.drv %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @application.vin %>
+</p>
+
+<p>
+  <strong>Options:</strong>
+  <%= @application.options %>
+</p>
+
+<p>
+  <strong>Engine:</strong>
+  <%= @application.engine_id %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

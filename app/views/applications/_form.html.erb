@@ -1,0 +1,53 @@
+<%= form_for(@application) do |f| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% @application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :cyl %><br>
+    <%= f.text_field :cyl %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :drv %><br>
+    <%= f.text_field :drv %>
+  </div>
+  <div class="field">
+    <%= f.label :vin %><br>
+    <%= f.text_field :vin %>
+  </div>
+  <div class="field">
+    <%= f.label :options %><br>
+    <%= f.text_field :options %>
+  </div>
+  <div class="field">
+    <%= f.label :engine_id %><br>
+    <%= f.number_field :engine_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
