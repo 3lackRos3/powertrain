@@ -75,21 +75,21 @@ task :get_datas => :environment do
 					application_table = noko.css('#ProductDetail_ExtInfo_div tbody tr')
 					application_table.each_with_index do |x,index|
 						next if index == 0
-						make = x.css('td[1]').text.strip
+						make = x.css('td[1]').text.strip.empty? ?  x.css('td[2]').text.strip : x.css('td[1]').text.strip
 						puts make
-						model = x.css('td[2]').text.strip
+						model =x.css('td[1]').text.strip.empty? ? x.css('td[3]').text.strip : x.css('td[2]').text.strip
 						puts model
-						year = x.css('td[3]').text.strip
+						year = x.css('td[1]').text.strip.empty? ? x.css('td[4]').text.strip : x.css('td[3]').text.strip
 						puts year
-						cyl = x.css('td[4]').text.strip
+						cyl =x.css('td[1]').text.strip.empty? ? x.css('td[5]').text.strip : x.css('td[4]').text.strip
 						puts cyl
-						size = x.css('td[5]').text.strip
+						size =x.css('td[1]').text.strip.empty? ? x.css('td[6]').text.strip : x.css('td[5]').text.strip
 						puts size
-						drv = x.css('td[6]').text.strip
+						drv =x.css('td[1]').text.strip.empty? ? x.css('td[7]').text.strip : x.css('td[6]').text.strip
 						puts drv
-						vin = x.css('td[7]').text.strip
+						vin = x.css('td[1]').text.strip.empty? ? x.css('td[8]').text.strip : x.css('td[7]').text.strip
 						puts vin
-						options = x.css('td[8]').text.strip
+						options =x.css('td[1]').text.strip.empty? ? x.css('td[9]').text.strip : x.css('td[8]').text.strip
 						puts options
 				        Application.create(make: make,engine_id: create_engine.id,model: model,year: year,cyl: cyl,size: size,drv: drv,vin: vin,options: options)
 				    end
